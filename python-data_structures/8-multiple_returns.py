@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if sentence:
-        sentence_length = len(sentence)
+    my_tuple = ()
+    if len(sentence) == 0:
+        my_tuple = 0, "None"
     else:
-        sentence_length = 0
-        return tuple((sentence_length, None if not sentence else sentence[:1]))
+        my_tuple = len(sentence), sentence[0]
+    return my_tuple
